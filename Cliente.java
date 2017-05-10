@@ -1,29 +1,16 @@
-/*
-	Desenvolvedor: Joel Gonçalves;
-	Disciplina: Implementação orientada a objetos;
-*/
-
 import java.io.*;
 import java.util.Scanner;
 
 public class Cliente{
-	private String Nome;
-	private String Endereco;
-	protected double QuantidadeAguaConsumida;
-	protected double QuantidadeEsgotoProduzido;
+	protected String Nome;
+	protected String Endereco;
+	protected double QtdAguaConsumida;
+	protected double QtdEsgotoProduzido;
+	protected double ValorConta;
 
-	//Construtor da class Cliente;
+	//metodos de acesso;
 
-	public Cliente(String Nome, String Endereco, double QuantidadeAguaConsumida, double QuantidadeEsgotoProduzido){
-		this.Nome = Nome;
-		this.Endereco = Endereco;
-		this.QuantidadeAguaConsumida = QuantidadeAguaConsumida;
-		this.QuantidadeEsgotoProduzido = QuantidadeEsgotoProduzido;
-	}
-
-	//Metodos de acesso;
-
-	public void setNome(String Nome){
+	public void setNome (String Nome){
 		this.Nome = Nome;
 	}
 
@@ -31,12 +18,12 @@ public class Cliente{
 		this.Endereco = Endereco;
 	}
 
-	public void setQuantidadeAguaConsumida(double QuantidadeAguaConsumida){
-		this.QuantidadeAguaConsumida = QuantidadeAguaConsumida;
+	public void setQtdAguaConsumida(double QtdAguaConsumida){
+		this.QtdAguaConsumida = QtdAguaConsumida;
 	}
 
-	public void setQuantidadeEsgotoProduzido(double QuantidadeEsgotoProduzido){
-		this.QuantidadeEsgotoProduzido = QuantidadeEsgotoProduzido;
+	public void setQtdEsgotoProduzido(double QtdEsgotoProduzido){
+		this.QtdEsgotoProduzido = QtdEsgotoProduzido;
 	}
 
 	public String getNome(){
@@ -47,18 +34,23 @@ public class Cliente{
 		return Endereco;
 	}
 
-	public double getQuantidadeAguaConsumida(){
-		return QuantidadeAguaConsumida;
-	} 
-
-	public double getQuantidadeEsgotoProduzido(){
-		return  QuantidadeEsgotoProduzido;
+	public double getQtdAguaConsumida(){
+		return QtdAguaConsumida;
 	}
 
-	//calcular valor bruto;
+	public double getQtdEsgotoProduzido(){
+		return QtdEsgotoProduzido;
+	}
 
-	public double CalcularValorBruto(double Taxa){
-		return (QuantidadeAguaConsumida + QuantidadeEsgotoProduzido ) * Taxa;
+	public double getValorConta(){
+		return ValorConta;
+	}
+
+	public void CalcularValorDaConta(){
+
+	}
+
+	public double AplicarAliquota(){
+		return 0;
 	}
 }
-

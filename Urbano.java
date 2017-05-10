@@ -1,31 +1,23 @@
-/*
-	Desenvolvedor: Joel Gonçalves;
-	Disciplina: Implementação orientada a objetos;
-*/
-
 import java.io.*;
 import java.util.Scanner;
 
 public class Urbano extends Cliente{
-	private double ValorLiquido;
 
-	//construtor
-	public Urbano(String Nome, String Endereco, double QuantidadeAguaConsumida, double QuantidadeEsgotoProduzido){
-		super(Nome, Endereco, QuantidadeAguaConsumida, QuantidadeEsgotoProduzido);
+	//Construtor da class
+	public Urbano(){
+		super();
 	}
 
-	//metodos de acesso
-
-	public double getValorLiquido(){
-		return ValorLiquido;
+	public void CalcularValorDaConta(){
+		ValorConta = (QtdAguaConsumida + QtdEsgotoProduzido)  * 3.5;
 	}
 
-	public void CalcularValorLiquido(){
-		if (CalcularValorBruto(3.5) <= 200){
-			ValorLiquido = CalcularValorBruto(3.5) + (CalcularValorBruto(3.5) * 0.01); 
+	public double AplicarAliquota(){
+		if (ValorConta <= 20) {
+			return ValorConta + (ValorConta * 0.03);
 		}
 		else{
-			ValorLiquido = CalcularValorBruto(3.5) + (CalcularValorBruto(3.5) * 0.15);
+			return ValorConta + (ValorConta * 0.15);
 		}
 	}
 }
